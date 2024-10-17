@@ -12,7 +12,7 @@ public class ProductInventoryManagement {
 
     public void searchPrice(String product) {
         boolean found = false;
-        for (int i = 0; i < product.length(); i++) {
+        for (int i = 0; i < products.length; i++) {
             if(products[i].equalsIgnoreCase(product)) {
                 System.out.println("Product: " + products[i] + " = $" + prices[i]);
                 found = true;
@@ -38,6 +38,7 @@ public class ProductInventoryManagement {
         double[] prices = {999.99, 599.99, 199.99, 299.99, 49.99};
         ProductInventoryManagement amazon = new ProductInventoryManagement(products,prices);
         amazon.display();
-        amazon.searchPrice("Laptop");
+        amazon.searchPrice("Laptop");//Return existing product's price
+        amazon.searchPrice("Camera"); //Test product does not exist
     }
 }
