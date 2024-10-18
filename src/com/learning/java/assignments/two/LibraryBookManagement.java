@@ -67,7 +67,7 @@ public class LibraryBookManagement {
 
         System.out.print("Enter the name of the book you want to replace: " );
         String existing = sc.next();
-        System.out.print("Enter the name of the book you want to replace: " );
+        System.out.print("Enter the name of the book you want to add: " );
         String replace = sc.next();
 
         //Replacing an existing book with a new book.
