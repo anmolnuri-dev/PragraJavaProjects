@@ -1,6 +1,5 @@
 package com.learning.java.oct26.book;
 
-import com.learning.java.oct26.encap.Counter;
 
 public  class Student {
 
@@ -26,7 +25,6 @@ class MainTest {
       //  Student student = new Student("101","Student");
         MyStudent student = new MyStudent("101","test");
         final int count  = 0;
-        Counter counter = new Counter();
 
     }
 
