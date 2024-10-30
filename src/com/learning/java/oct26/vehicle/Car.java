@@ -1,4 +1,4 @@
-package com.learning.java.oct26;
+package com.learning.java.oct26.vehicle;
 
 public class Car extends Vehicle{
 
