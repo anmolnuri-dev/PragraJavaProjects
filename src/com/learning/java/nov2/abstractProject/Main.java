@@ -7,8 +7,8 @@ public class Main {
        // iphone.makeCalls();
         //iphone.playGames();
 
-        MobilePhone samsung = new Samsung();
-        samsung.leaveVoiceMails();
+        //MobilePhone samsung = new Samsung();
+        //samsung.leaveVoiceMails();
 
     }
 }
