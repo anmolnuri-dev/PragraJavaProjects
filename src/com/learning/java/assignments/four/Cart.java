@@ -30,9 +30,21 @@ public class Cart {
             return null;
         }
 
+        List<Product> availableProducts = new ArrayList<>();
         double totalAmount = 0;
+
         for (Product product : items) {
-            totalAmount += product.getPrice();
+            if (product.isAvailable()) {
+                availableProducts.add(product);
+                totalAmount += product.getPrice();
+            } else {
+                System.out.println("Product \"" + product.getName() + "\" is out of stock and cannot be included in the order.");
+            }
+        }
+
+        if (availableProducts.isEmpty()) {
+            System.out.println("No available products to create an order.");
+            return null;
         }
 
         // Create and return the order
@@ -50,5 +62,7 @@ public class Cart {
             }
         }
     }
+
 }
+
 
