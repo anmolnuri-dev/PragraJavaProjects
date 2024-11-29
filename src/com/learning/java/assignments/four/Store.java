@@ -66,7 +66,7 @@ public class Store {
         if (admin.getRole().equals("Admin")) {
             products.add(product);
             System.out.println(admin.getName() + " adds a new product " + "\"" +
-                    product.getName() + "\" " + " with price $" + product.getPrice() + " added to the store.");
+                    product.getName() + "\"" + " with price $" + product.getPrice() + " added to the store.");
         } else {
             throw new IllegalArgumentException("Access denied: Only admins can add products.");
         }
@@ -84,7 +84,7 @@ public class Store {
             if (productToRemove != null) {
                 products.remove(productToRemove);
                 System.out.println(admin.getName() + " removes " + "\""
-                        + productToRemove.getName() + "\"" + "from the inventory.");
+                        + productToRemove.getName() + "\"" + " from the inventory.");
             } else {
                 System.out.println("Product with ID " + productId + " not found in the inventory.");
             }
