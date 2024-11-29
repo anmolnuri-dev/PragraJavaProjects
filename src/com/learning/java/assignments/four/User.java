@@ -13,7 +13,23 @@ public abstract class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public abstract String getRole();
+    public String getRole() {
+        return "User";
+    } ;
 
+    public int getUserId() {
+        return userId;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 }

@@ -1,19 +1,24 @@
 package com.learning.java.assignments.four;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Order {
 
-    private int orderId;
+    private static int orderId = 0;
     private Customer customer;
-    private Product[] productList;
+    private List<Product> productList;
     private double totalAmount;
 
-    public Order(int orderId, Customer customer, Product[] productList) {
-        this.orderId = orderId;
+    public Order(Customer customer, List<Product> productList, double totalAmount) {
+        ++Order.orderId;
         this.customer = customer;
         this.productList = productList;
-    }
+        this.totalAmount = totalAmount;
 
-    public double calculateTotalAmount(){
+    }
+    public double calculateTotal(){
         totalAmount = 0.0;
         for(Product p: productList) {
             if(p != null) {
@@ -27,10 +32,6 @@ public class Order {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
-    }
-
     public Customer getCustomer() {
         return customer;
     }
@@ -39,11 +40,11 @@ public class Order {
         this.customer = customer;
     }
 
-    public Product[] getProductList() {
-        return productList;
+    public List<Product> getProductList() {
+        return this.productList;
     }
 
-    public void setProductList(Product[] productList) {
+    public void setProductList(List<Product> productList) {
         this.productList = productList;
     }
 
@@ -53,5 +54,17 @@ public class Order {
 
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Order ID: ").append(orderId).append("\n");
+        sb.append("Products:\n");
+        for (Product product : productList) {
+            sb.append(" - ").append(product).append("\n");
+        }
+        sb.append("Total Amount: $").append(totalAmount).append("\n");
+        return sb.toString();
     }
 }

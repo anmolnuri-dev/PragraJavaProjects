@@ -28,16 +28,8 @@ public class Product {
         return productId;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public double getPrice() {
@@ -65,5 +57,11 @@ public class Product {
     public boolean isAvailable(){
         return getStockQuantity() > 0;
     }
+
+    @Override
+    public String toString() {
+        return name + " ($" + price + ")";
+    }
+
 
 }
